@@ -425,3 +425,53 @@ td,
 th {
   padding: 0;
 }
+
+.typewriter {
+  font-size: 18px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the text horizontally */
+  justify-content: center; /* Centers the text vertically */
+  text-align: center; /* Centers the text within its container */
+  padding: 1px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centers the container on the page */
+  max-width: 800px; /* Limits the width of the container for better readability */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .typewriter {
+    font-size: 16px; /* Decreases font size for smaller screens */
+    padding: 1px; /* Reduces padding for smaller screens */
+  }
+}
+
+.typewriter-text {
+  overflow: hidden;
+  border-right: 0.15em solid #333;
+  white-space: nowrap;
+  margin: 0 0 1em 0;
+  letter-spacing: 0.05em;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+.typewriter-text.bold {
+  font-weight: 700;
+}
+
+.typewriter-text.light {
+  font-weight: 300;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
